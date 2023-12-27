@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Parralax</title>
+</head>
+<script src="snowstorm.js"></script>
+<body>
+<header class="header header__inner">
+    <a class="header__logo" href="#">
+        <img class="header__img" src="images/xmas-logo.webp" alt="logo" width="460" height="120">
+    </a>
+    <a class="header__link" href="#section_2">Get your gift</a>
+</header>
+<main>
+    <section class="xmas">
+        <span class="background"></span>
+        <img class="cloud__top" src="images/cloud.webp" alt="cloud__top">
+        <img class="cloud__bottom" src="images/cloud.webp" alt="cloud__bottom">
+        <img class="moon" src="images/moon-2.webp" alt="moon">
+        <div class="santa__box">
+            <img class="santa" src="images/santa.svg" alt="santa">
+        </div>
+        <img class="mountains" src="images/mountains.webp" alt="mountains">
+        <img class="trees" src="images/trees.webp" alt="tree">
+        <div class="container xmas__container">
+            <h1 class="xmas__title"> we wish you a <span>Merry Christmas</span></h1>
+        </div>
+
+    </section>
+    <section id="section_2" class="card">
+        <div class="container card__container">
+            <div class="card__box">
+                <svg class="card__svg">
+                    <use href="images/sprite.svg#present"></use>
+                </svg>
+                <h2 class="card__title">Thank you</h2>
+                <p class="card__text">As our valued customer we would like to give you a special discount on all
+                    orders</p>
+                <p class="card__discount">-20%off</p>
+                <div class="card__code">
+                    <p>use code</p>
+                    <p>xmasgift</p>
+                </div>
+                <p class="card__xmas">Merry christmas & happy new year</p>
+            </div>
+        </div>
+        <div class="card__tree">
+            <svg class="star">
+                <use href="images/sprite.svg#star"></use>
+            </svg>
+            <img class="xmas__tree" src="images/xmastree.webp" alt="">
+        </div>
+        <img class="card__snow" src="images/snow.png" alt="">
+    </section>
+</main>
+<script src="https://app.embed.im/snow.js" defer></script>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,437 @@
+@font-face {
+    font-family: 'Oxygen';
+    src: url('../fonts/Oxygen-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Oxygen';
+    src: url('../fonts/Oxygen-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Whisper';
+    src: url('../fonts/Whisper-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+html, body {
+    scroll-behavior: smooth;
+}
+picture {
+    display: inline-block;
+}
+
+/*Global*/
+body{
+    font-family: 'Oxygen';
+    font-weight: 400;
+    position: relative;
+}
+
+.container{
+    max-width: 1230px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+
+/*Header*/
+
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 60px;
+}
+.header__inner{
+
+}
+.header__logo{
+
+
+}
+.header__img{
+    width: auto;
+    height: 80px;
+
+}
+.header__link{
+    text-decoration: none;
+    color: aliceblue;
+    background: #000;
+    padding: 20px 30px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: all .2s linear;
+}
+.header__link:hover{
+    background: aliceblue;
+    color: black;
+    box-shadow: 0 0 4px 0 #fff, inset 0 0 7px #fff;
+}
+
+/*Section 1*/
+
+.xmas{
+    background: #181818 url("/images/main-bg2.webp") no-repeat 50%/cover;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.xmas img{
+    position: absolute;
+}
+
+.background{
+    position: absolute;
+    z-index: 100;
+    background: #040709;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+}
+.cloud__top{
+    width: 1000px;
+    height: auto;
+    top: -160px;
+    right: -280px;
+    z-index: 50;
+    animation: clouds 19s linear infinite alternate;
+
+}
+.cloud__bottom{
+    z-index: 50;
+    bottom: 20%;
+    left: -550px;
+    width: 1000px;
+    animation: clouds 20s linear infinite alternate;
+
+}
+.moon{
+    z-index: 60;
+    bottom: 28%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 400px;
+
+}
+.santa__box{
+    position: absolute;
+    z-index: 70;
+    width: auto;
+    height: 70px;
+    left: 50%;
+    bottom: 40%;
+    transform: translateX(-50%);
+
+}
+img.santa{
+    position: static;
+    width: auto;
+    height: 100%;
+    animation: santa 15s infinite;
+}
+.mountains, .trees{
+    z-index: 80;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.trees{
+    z-index: 90;
+}
+.xmas__container{
+    position: relative;
+    z-index: 80;
+    top: -150px;
+}
+
+.xmas__title{
+    font-family: 'Whisper';
+    text-align: center;
+    letter-spacing: 3px;
+    color: aliceblue;
+    font-size: 30px;
+    text-shadow: 0 0 10px #000;
+}
+.xmas__title span{
+    font-family: 'Whisper';
+    display: block;
+    font-size: 80px;
+    text-transform: capitalize;
+}
+
+/*Animation*/
+
+@keyframes clouds {
+    0%{
+        transform: translateX(-50px) scale(1);
+    }
+    100%{
+        transform: translateX(0) scale(.95);
+    }
+
+}
+
+@keyframes santa {
+    0%, 20%{
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+    45% {
+        transform: translateY(-200%) translateX(300%) scale(.95) rotate(-10deg);
+    }
+    55%{
+        transform: translateX(-300%) translateY(-200%) scale(.95);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0) scale(1)
+
+    }
+
+}
+
+.card__text{
+    color: #ffffff;
+}
+
+
+/* SECTION 2*/
+
+
+.card{
+    min-height: 100vh;
+    overflow: hidden;
+    background: #040709;
+    background: url("../images/bottom-bg.webp") no-repeat 50%/cover;
+    position: relative;
+    color: #040709;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding: 150px 0;
+}
+
+.card__container{
+
+}
+.card__box{
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    background: aliceblue url("images/card-bg-image.jpeg");
+    position: relative;
+}
+.card__box::before{
+    content: '';
+    position: absolute;
+    inset: 10px;
+    border: 2px solid #040709;
+}
+.card__svg{
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+.card__title{
+    font-family: 'Whisper';
+    letter-spacing: 3px;
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+.card__text{
+    max-width: 350px;
+    margin: 0 auto;
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #040709;
+}
+.card__discount{
+    font-size: 80px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.card__code{
+    position: relative;
+    padding: 18px 0;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.card__code p + p{
+    font-weight: 700;
+    font-size: 40px;
+    margin-top: 12px;
+}
+.card__code::before,
+.card__code::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -20px;
+    width: 40px;
+    height: 2px;
+    background: #040709;
+}
+.card__code::after{
+    top: auto;
+    bottom: 0;
+}
+.card__xmas{
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 4px;
+}
+.card__tree{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    max-width: 400px;
+    margin-left: -500px;
+    z-index: 10;
+}
+.card__tree::before{
+    content: '';
+    position: absolute;
+    bottom: 100px;
+    left: 120px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: deeppink;
+    box-shadow: 0 0 20px 2px deeppink,
+                100px -90px 0 0 red, 100px -90px 20px 0 red,
+                50px -190px 0 0 #bf00ff, 50px -190px 20px 0 #bf00ff,
+                130px -10px 0 0 #000dff, 130px -10px 20px 0 #000dff,
+                0px -100px 0 0 #ffea00, 0px -100px 20px 0 #ffea00,
+                70px -290px 0 0 #43c9ff, 70px -290px 20px 0 #43c9ff,
+                60px -30px 0 0 #37ff00, 60px -30px 20px 0 #37ff00,
+                100px -160px 0 0 #8400ff, 100px -160px 20px 0 #8400ff;
+    animation: pulsation .5s infinite alternate;
+}
+.star{
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    fill: aliceblue;
+    filter: drop-shadow(0 0 25px #fafafa);
+    animation: star 5s infinite alternate;
+}
+.xmas__tree{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.card__snow{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+}
+
+@keyframes pulsation {
+    0%{
+        background: #1428ff;
+        box-shadow: 0 0 20px 2px deeppink,
+        100px -90px 0 0 red, 100px -90px 20px 0 red,
+        50px -190px 0 0 #bf00ff, 50px -190px 20px 0 #bf00ff,
+        130px -10px 0 0 #000dff, 130px -10px 20px 0 #000dff,
+        0px -100px 0 0 #00ff66, 0px -100px 20px 0 #00ff66,
+        70px -290px 0 0 #ff0099, 70px -290px 20px 0 #ff0099,
+        60px -30px 0 0 #37ff00, 60px -30px 20px 0 #37ff00,
+        100px -160px 0 0 #37ff00, 100px -160px 20px 0 #37ff00;
+    }
+    100%{
+        background: deeppink;
+        box-shadow: 0 0 20px 2px deeppink,
+        100px -90px 0 0 wheat, 100px -90px 20px 0 wheat,
+        50px -190px 0 0 red, 50px -190px 20px 0 red,
+        130px -10px 0 0 #bf00ff, 130px -10px 20px 0 #bf00ff,
+        0px -100px 0 0 #ffea00, 0px -100px 20px 0 #ffea00,
+        70px -290px 0 0 #43c9ff, 70px -290px 20px 0 #43c9ff,
+        60px -30px 0 0 #ff0000, 60px -30px 20px 0 #ff0000,
+        100px -160px 0 0 #ffea00, 100px -160px 20px 0 #ffea00;
+    }
+}
+
+@keyframes star {
+    20%{
+        fill: #ff0000;
+    }
+    40%{
+        fill: rgb(132, 0, 255);
+    }
+    60%{
+        fill: #00ff37;
+    }
+    80%{
+        fill: #eee155;
+    }
+    100%{
+        fill: #ff0062;
+    }
+}
